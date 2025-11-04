@@ -27,7 +27,7 @@ To get a copy of the application up and running, follow these simple steps.
 
 ### Installation
 
-You can download the application directly from the [official website](https://ravish-ranjan.github.io/resource-monitor) or from the **Releases** section of this GitHub repository.
+You can download the application directly from the [official website](https://resource-monitor.ravishdev.org) or from the **Releases** section of this GitHub repository.
 
 We offer two types of installers for Windows (x64):
 
@@ -39,20 +39,6 @@ We offer two types of installers for Windows (x64):
     * This is recommended for system administrators or for deployment via group policy.
     * Download the `.msi` file and run it.
     * **Important:** Because the application's publisher is new, Windows Defender SmartScreen may show a warning. If this happens, click **"More info"**, then click **"Run anyway"** to proceed with the installation.
-
----
-
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
 
 ---
 
