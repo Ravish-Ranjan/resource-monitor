@@ -1,7 +1,7 @@
 # Resource Monitor
 A lightweight, powerful utility that provides real-time, graphical insights into your system's CPU, RAM, and storage usage.
 
-![App Screenshot](/assets/image.png)
+![App Screenshot](https://raw.githubusercontent.com/Ravish-Ranjan/resource-monitor/cdba5210335e5461605c1f4af07d86b2496e0563/assets/image.png)
 
 ---
 
