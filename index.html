@@ -9,7 +9,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			rel="shortcut icon"
-			href="/resource-monitor/assets/appicon.png"
+			href="/assets/appicon.png"
 			type="image/x-icon"
 		/>
 		<link
@@ -65,7 +65,7 @@
 
 		<!-- Hero Section -->
 		<main class="container mx-auto px-6 py-16 md:py-24 text-center">
-			<div class="max-w-4xl mx-auto">
+			<div class="max-w-4xl mx-auto grid place-item-center">
 				<h2
 					class="text-4xl md:text-6xl font-extrabold text-white leading-tight"
 				>
@@ -78,12 +78,20 @@
 					RAM, and storage usage with clean, easy-to-read percentage
 					gauges and live-updating charts.
 				</p>
-				<div class="mt-10">
+				<div class="mt-10 flex justify-evenly flex-wrap gap-2">
 					<a
-						href="#download"
-						class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg shadow-xl transition duration-300 transform hover:scale-105"
+						href="#download_win"
+						class="underline-blue-600 underline text-white font-bold py-4 px-8 rounded-lg text-lg shadow-xl transition duration-300 transform hover:scale-105"
+						id="win-down-but"
 					>
 						Download for Windows x64
+					</a>
+					<a
+						href="#download_linux"
+						class="underline-blue-600 underline text-white font-bold py-4 px-8 rounded-lg text-lg shadow-xl transition duration-300 transform hover:scale-105"
+						id="linux-down-but"
+					>
+						Download for Linux x64
 					</a>
 				</div>
 				<div class="mt-12">
@@ -204,11 +212,12 @@
 		</section>
 
 		<!-- Download Section -->
-		<section id="download" class="py-20">
-			<div class="container mx-auto px-6">
+		<section id="download" class="py-20 grid gap-4">
+			<div class="container mx-auto px-6" id="download_win">
 				<div
 					class="bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 lg:p-16"
 				>
+					<!-- windows -->
 					<div
 						class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
 					>
@@ -317,6 +326,137 @@
 					</div>
 				</div>
 			</div>
+			<div class="container mx-auto px-6" id="download_linux">
+				<div
+					class="bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12 lg:p-16"
+				>
+					<!-- linux -->
+					<div
+						class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+					>
+						<div>
+							<h3 class="text-3xl font-bold text-white">
+								Download Resource Monitor
+							</h3>
+							<p class="text-gray-400 mt-4">
+								Get the latest version for Linux. Choose your
+								preferred installer format. Both packages
+								contain the full version of the application.
+							</p>
+							<p class="mt-2 text-sm text-gray-500">
+								Version 25.12.9 | Compatible with any Linux
+								Distribution
+							</p>
+						</div>
+						<div class="flex flex-col space-y-6">
+							<!-- AppImage Download Block -->
+							<div>
+								<a
+									href="https://github.com/Ravish-Ranjan/resource-monitor/releases/download/v25.12.9/resource-monitor-25.12.9.AppImage"
+									download="ResourceMonitor-v25.12.9.AppImage"
+									class="group bg-blue-600 hover:bg-blue-700 rounded-lg p-5 transition duration-300 block flex items-center justify-between"
+								>
+									<div>
+										<p
+											class="font-semibold text-white text-lg"
+										>
+											Download Standalone AppImage
+											v25.12.9 (.AppImage)
+										</p>
+										<p class="text-blue-200 text-sm">
+											Recommended version
+										</p>
+									</div>
+									<svg
+										class="w-8 h-8 text-white opacity-70 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
+										/>
+									</svg>
+								</a>
+							</div>
+							<!-- Dedian package Download Block -->
+							<a
+								href="https://github.com/Ravish-Ranjan/resource-monitor/releases/download/v25.12.9/resource-monitor_25.12.9_amd64.deb"
+								download="ResourceMonitor-v25.12.9.deb"
+								class="group bg-gray-700 hover:bg-gray-600 rounded-lg p-5 transition duration-300"
+							>
+								<div class="flex items-center justify-between">
+									<div>
+										<p
+											class="font-semibold text-white text-lg"
+										>
+											Download Debian Package v25.12.9
+											(.deb)
+										</p>
+										<p class="text-gray-400 text-sm">
+											Standard package for debian based
+											linux distribution
+										</p>
+									</div>
+									<svg
+										class="w-8 h-8 text-white opacity-70 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
+										/>
+									</svg>
+								</div>
+							</a>
+							<!-- Snap package Download Block -->
+							<a
+								href="https://github.com/Ravish-Ranjan/resource-monitor/releases/download/v25.12.9/resource-monitor_25.12.9_amd64.snap"
+								download="ResourceMonitor-v25.12.9.snap"
+								class="group bg-gray-700 hover:bg-gray-600 rounded-lg p-5 transition duration-300"
+							>
+								<div class="flex items-center justify-between">
+									<div>
+										<p
+											class="font-semibold text-white text-lg"
+										>
+											Download Snap Package v25.12.9
+											(.deb)
+										</p>
+										<p class="text-gray-400 text-sm">
+											Standard snap package for any 
+											linux distribution
+										</p>
+									</div>
+									<svg
+										class="w-8 h-8 text-white opacity-70 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="2"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M9 13.5l3 3m0 0l3-3m-3 3v-6m1.06-4.19l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
+										/>
+									</svg>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- Footer -->
@@ -325,5 +465,43 @@
 				<p>&copy; 2024 Resource Monitor. All Rights Reserved.</p>
 			</div>
 		</footer>
+		<script>
+			function getOS() {
+				const userAgent = window.navigator.userAgent;
+				const platform = window.navigator.platform;
+				const macosPlatforms = [
+					"Macintosh",
+					"MacIntel",
+					"MacPPC",
+					"Mac68K",
+				];
+				const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+				const iosPlatforms = ["iPhone", "iPad", "iPod"];
+
+				if (macosPlatforms.indexOf(platform) !== -1) {
+					return "macOS";
+				} else if (iosPlatforms.indexOf(platform) !== -1) {
+					return "iOS";
+				} else if (windowsPlatforms.indexOf(platform) !== -1) {
+					return "Windows";
+				} else if (/Android/.test(userAgent)) {
+					return "Android";
+				} else if (/Linux/.test(platform)) {
+					return "Linux";
+				}
+
+				return "Unknown";
+			}
+
+			const win_but = document.getElementById("win-down-but");
+			const linux_but = document.getElementById("linux-down-but");
+			const os = getOS();
+			console.log(os);
+			if (os === "Windows") {
+				win_but.style.backgroundColor = "#2563eb";
+			} else if (os === "Linux") {
+				linux_but.style.backgroundColor = "#2563eb";
+			}
+		</script>
 	</body>
 </html>
