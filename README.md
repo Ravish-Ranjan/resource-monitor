@@ -1,49 +1,69 @@
-# Resource Monitor
+# React + TypeScript + Vite
 
-A lightweight, powerful utility that provides real-time, graphical insights into your system's CPU, RAM, and storage usage.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![App Screenshot](/assets/image.png)
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## About The Project
+## Expanding the ESLint configuration
 
-Resource Monitor was built to give users a clean, simple, and immediate way to see what's happening inside their PC. It graphically displays your system's most critical performance metrics with easy-to-read percentage gauges and live-updating charts, helping you identify bottlenecks and manage resources effectively.
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-This repository contains the source code for the official download website.
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-### Key Features
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
-* **Graphical CPU Usage:** Instantly see your CPU utilization as a clear percentage. Dive deeper with live graphs showing individual core performance.
-* **RAM & Storage Percentages:** Visualize your memory and storage consumption at a glance with intuitive graphs.
-* **Network Activity Monitoring:** Keep track of network connections, data transfer rates, and latency for all running applications.
-* **Lightweight & Efficient:** Designed to have a minimal impact on your system's performance.
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
----
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-## Getting Started
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-To get a copy of the application up and running, follow these simple steps.
-
-### Installation
-
-You can download the application directly from the [official website](https://resource-monitor.ravishdev.org) or from the **Releases** section of this GitHub repository.
-
-We offer two types of installers for Windows (x64):
-
-1.  **Executable Installer (`.exe`)**
-    * This is the standard installer recommended for most users.
-    * Download the `.exe` file and run it to begin the installation.
-
-2.  **Windows Installer (`.msi`)**
-    * This is recommended for system administrators or for deployment via group policy.
-    * Download the `.msi` file and run it.
-    * **Important:** Because the application's publisher is new, Windows Defender SmartScreen may show a warning. If this happens, click **"More info"**, then click **"Run anyway"** to proceed with the installation.
-
----
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
----
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
