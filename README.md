@@ -1,5 +1,4 @@
 # Resource Monitor
-
 A lightweight, powerful utility that provides real-time, graphical insights into your system's CPU, RAM, and storage usage.
 
 ![App Screenshot](/assets/image.png)
@@ -29,16 +28,37 @@ To get a copy of the application up and running, follow these simple steps.
 
 You can download the application directly from the [official website](https://resource-monitor.ravishdev.org) or from the **Releases** section of this GitHub repository.
 
-We offer two types of installers for Windows (x64):
+#### Current Version: **25.12.9**
 
-1.  **Executable Installer (`.exe`)**
-    * This is the standard installer recommended for most users.
-    * Download the `.exe` file and run it to begin the installation.
+### Windows (x64)
 
-2.  **Windows Installer (`.msi`)**
-    * This is recommended for system administrators or for deployment via group policy.
-    * Download the `.msi` file and run it.
-    * **Important:** Because the application's publisher is new, Windows Defender SmartScreen may show a warning. If this happens, click **"More info"**, then click **"Run anyway"** to proceed with the installation.
+We offer two types of installers for Windows:
+
+1. **Executable Installer (`.exe`)**
+   * This is the standard installer recommended for most users.
+   * Download the `.exe` file and run it to begin the installation.
+
+2. **Windows Installer (`.msi`)**
+   * This is recommended for system administrators or for deployment via group policy.
+   * Download the `.msi` file and run it.
+   * **Important:** Because the application's publisher is new, Windows Defender SmartScreen may show a warning. If this happens, click **"More info"**, then click **"Run anyway"** to proceed with the installation.
+
+### Linux
+
+We now support multiple Linux package formats for broad compatibility:
+
+1. **AppImage (`.AppImage`)**
+   * Universal Linux package that runs on most distributions.
+   * Download the `.AppImage` file, make it executable (`chmod +x ResourceMonitor.AppImage`), and run it.
+   * No installation required—just download and run.
+
+2. **Debian Package (`.deb`)**
+   * For Debian, Ubuntu, and derivative distributions.
+   * Download the `.deb` file and install it using `sudo dpkg -i ResourceMonitor.deb` or through your package manager.
+
+3. **Snap Package (`.snap`)**
+   * Universal package format supported across many Linux distributions.
+   * Download the `.snap` file and install it using `sudo snap install ResourceMonitor.snap --dangerous` or install directly from the Snap Store.
 
 ---
 
