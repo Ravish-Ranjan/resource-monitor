@@ -15,6 +15,7 @@ app.on("ready", () => {
 			preload: getPreloadPath(),
 		},
 		frame: false,
+		height:290
 	});
 
 	if (isDev()) {

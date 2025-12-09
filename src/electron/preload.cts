@@ -1,5 +1,3 @@
-import { ipcRenderer } from "electron";
-
 const electron = require("electron");
 
 electron.contextBridge.exposeInMainWorld("electron", {
