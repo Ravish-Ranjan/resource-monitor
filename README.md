@@ -64,6 +64,6 @@ We now support multiple Linux package formats for broad compatibility:
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [LICENSE](/LICENCE) for more information.
 
 ---
