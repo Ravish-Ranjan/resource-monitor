@@ -1,9 +1,14 @@
 {
-	"name": "client",
+	"name": "resource-monitor",
 	"private": true,
-	"version": "0.0.0",
+	"version": "25.12.9",
 	"type": "module",
 	"main": "dist-electron/main.js",
+	"description": "Resource Monitor App",
+	"author": {
+		"name": "Ravish Ranjan",
+		"email": "ravishranjan2003@gmail.com"
+	},
 	"scripts": {
 		"dev": "npm-run-all --parallel dev:react dev:electron",
 		"dev:react": "vite",
